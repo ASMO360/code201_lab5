@@ -12,8 +12,10 @@ function sum(a,b){ //eslint-disable-line
   var num = a + b;
   var array = []
   array.push(num)
+  array.push('The sum of ' + a + ' and ' + b + ' is ' + num +'.')
   console.log('array index', array[0]);
-  console.log('The sum of ' + a + ' and ' + b + ' is ' + num +'.')
+  console.log(array)
+  return array
 }
 
 
