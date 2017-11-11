@@ -10,12 +10,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a,b){ //eslint-disable-line
   var num = a + b;
-  var array = []
-  array.push(num)
-  array.push('The sum of ' + a + ' and ' + b + ' is ' + num +'.')
-  console.log('array index', array[0]);
-  console.log(array)
-  return array
+  var array = [];
+  array.push(num);
+  array.push('The sum of ' + a + ' and ' + b + ' is ' + num +'.');
+  return array;
 }
 
 
@@ -35,12 +33,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
   var num = a * b;
-  var array = []
-  array.push(num)
-  array.push('The product of ' + a + ' and ' + b + ' is ' + num +'.')
-  console.log('array index', array[0]);
-  console.log(array)
-  return array
+  var array = [];
+  array.push(num);
+  array.push('The product of ' + a + ' and ' + b + ' is ' + num +'.');
+  return array;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -61,11 +57,34 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var absum = sum(a,b); //this outputs an array!
+  console.log('absum',absum);
+  var aB = absum[0];
+  console.log('aB :', aB);
+  console.log('c',c);
+  var totalSum = sum(aB, c);   //this outputs an array!!
+  var aOne = totalSum[0];
+  var arraySm = [];
+  console.log('aOne :', aOne);
+  arraySm.push(aOne);
+  console.log ('index 1:', arraySm);
+  var abproduct = multiply(a,b);  //this outputs an array!!!
+  console.log('abproduct:', abproduct);
+  var mAb = abproduct[0];
+  console.log('mAb', mAb);
+  var multiabc = multiply(mAb,c);   // this outputs an array!!
+  console.log('multiabc', multiabc)
+  var aTwo = multiabc[0];
+  console.log('aTwo :', aTwo);
+  arraySm.push(aTwo);
+  arraySm.push(+ a + ' and ' + b +' and '+ c +' sum to ' + aOne + '.');
+  arraySm.push('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + aTwo +'.');
+  console.log(arraySm);
+  return arraySm;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
