@@ -102,12 +102,23 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var absum = sum(a,b); //this outputs an array!
+  console.log('absum',absum);
+  var aB = absum[0];
+  console.log('aB :', aB);
+  console.log('c',c);
+  var totalSum = sum(aB, c);   //this outputs an array!!
+  var aOne = totalSum[0];
+  var arraySm = [];
+  console.log(totalSum)
+  console.log(aOne)
+  console.log(arraySm)
+//OUTPUT:  return array[sum of array#] ['2,3,4 was passed in as an array of numbers, and 9 is their sum.']
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
