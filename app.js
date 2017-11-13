@@ -143,10 +143,29 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var abmulti2 = multiply(testArray[0],testArray[1]); //this outputs an array!
+  console.log('abmulti2',abmulti2);
+  var aB2 = abmulti2[0];
+  console.log('aB2 :', aB2);
+  console.log('c',testArray[2]);
+  var totalmulti1 = multiply(aB2,testArray[2] );   //this outputs an array!!
+  var aOne2 = totalmulti1[0];
+  console.log('arraySm9 prior to input', arraySm9)
+  var arraySm9 = [];
+  console.log('totalmulti1', totalmulti1);
+  console.log('aOne2', aOne2);
+  console.log('arraySm9', arraySm9);
+  arraySm9.push(totalmulti1[0]);
+  console.log('arraySm9 after first push', arraySm9);
+  parseInt(testArray,10);
+  arraySm9.push('The numbers ' + testArray[0] + ',' + testArray[1] + ','  + testArray[2] + ' have a product of ' + aOne2 + '.');
+  console.log('arraySm9 after last push', arraySm9);
+  return arraySm9;
+  //OUTPUT:  return array[product of array#] ["The numbers 2,3,4 have a product of 24."]
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+ testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
