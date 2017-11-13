@@ -100,19 +100,28 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
+console.log(testArray)
 
 function sumArray(testArray){ //eslint-disable-line
-  var absum = sum(a,b); //this outputs an array!
-  console.log('absum',absum);
-  var aB = absum[0];
-  console.log('aB :', aB);
-  console.log('c',c);
-  var totalSum = sum(aB, c);   //this outputs an array!!
-  var aOne = totalSum[0];
-  var arraySm = [];
-  console.log(totalSum)
-  console.log(aOne)
-  console.log(arraySm)
+  var absum1 = sum(testArray[0],testArray[1]); //this outputs an array!
+  console.log('absum1',absum1);
+  var aB1 = absum1[0];
+  console.log('aB1 :', aB1);
+  console.log('c',testArray[2]);
+  var totalSum1 = sum(aB1,testArray[2] );   //this outputs an array!!
+  var aOne1 = totalSum1[0];
+  console.log('arraySm99 prior to input', arraySm99)
+  var arraySm99 = [];
+  console.log('totalSum1', totalSum1);
+  console.log('aOne1', aOne1);
+  console.log('arraySm99', arraySm99);
+  arraySm99.push(totalSum1[0]);
+  console.log('arraySm99 after first push', arraySm99);
+  parseInt(testArray,10);
+  arraySm99.push(testArray[0] + ',' + testArray[1] + ','  + testArray[2] + ' was passed in as an array of numbers, and ' + aOne1 + ' is their sum.');
+    //arraySm1.push(testArray[0],[1] [2] + ' was passed in as an array of numbers, and ' + aOne1 + ' is their sum.')
+  console.log('arraySm99 after last push', arraySm99);
+  return arraySm99;
 //OUTPUT:  return array[sum of array#] ['2,3,4 was passed in as an array of numbers, and 9 is their sum.']
 }
 
